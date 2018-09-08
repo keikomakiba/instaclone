@@ -1,0 +1,19 @@
+<h3><%= @user.name %>'s page</h3>
+<h3>✉︎: <%= @user.email %></h3>
+<div class=like>
+    
+    <p>LIKE IT<%=image_tag("like.gif") %>
+    </p>
+    
+</div>
+
+<% @favorites_blogs.each do |favorite| %>
+<li><%= favorite.title %>
+    <%= favorite.content %>
+    <%= image_tag favorite.image %>
+</li>
+<% end %>
+<h3><%= link_to "POSTS", blogs_path %></h3>
+
+
+<li class="a"><%= image_tag(@user.image.url) %></li>

@@ -1,0 +1,20 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.camera{
+    display: table;
+    font-size: 30px;
+    padding: 10px;
+}
+.camera img{
+    width: 40px;
+    height: 40px;
+}
+
+.like img{
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+}
+
