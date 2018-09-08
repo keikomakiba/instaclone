@@ -54,9 +54,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pry-rails'
   gem 'letter_opener_web'
+  gem 'bcrypt', '3.1.11'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'binding_of_caller'
