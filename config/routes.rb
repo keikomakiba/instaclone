@@ -12,4 +12,7 @@ Rails.application.routes.draw do
     resources :sessions, only: [:new, :create, :destroy]
     resources :users
     resources :favorites, only: [:create, :destroy]
+    
+    get '*path', controller: 'application', action: 'render_404'
+
 end
