@@ -1,10 +1,37 @@
 <section class="about">
     <h1>INSTAGRAM</h1>
     <p>写真を投稿しよう</p>
-    <div class=top><%= image_tag("phone.jpg") %></div>
+    
+    <!--<div id="topnumber">-->
+    <!--    <%#= image_tag("assets/images/insta.jpg") %>-->
+    <!--</div>-->
+    
+    <div class="slide-show">
+		<%= image_tag("/assets/images/insta0.jpg", class: 'active') %>
+		<%= image_tag("/assets/images/insta1.jpg") %>
+		<%= image_tag("/assets/images/insta2.jpg") %>
+	</div>
+
+
+<script>
+    const images = document.querySelectorAll('.slide-show img');
+
+let currentImage = 0;
+
+window.setInterval(() => {
+
+	images[currentImage].classList.remove('active');
+	currentImage++;
+	if (currentImage >= images.length) {
+		currentImage = 0;
+	}
+	images[currentImage].classList.add('active');
+}, 4000);
+
+</script>
+    
+    
+    
 </section>
   
-<footer>
-    <p>運営会社DIVE INTO CODE株式会社</p>
-    <p>© 2015-2016 Copyright DIVE INTO CODE Corp.</p>
-</footer>
+

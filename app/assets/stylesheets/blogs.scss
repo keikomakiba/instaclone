@@ -4,7 +4,7 @@
 
 header {
   width: 100%;
-  height: 54px;
+  height: auto;
 }
 
 header ul {
@@ -49,6 +49,7 @@ html {
 
 body {
   text-align: center;
+  min-height:100vh;
 }
 
 li {
@@ -57,7 +58,7 @@ li {
   list-style:none;
 }
 
-img {
+header img {
   max-width: 100%;
   width: 80px;
   height: 80px;
@@ -73,10 +74,9 @@ img {
 .a{
   img {
     display: block;
-    margin: 20px auto;
-    width: 700px;
-    height: 600px;
-    border-radius: 50%;
+    margin: 20px auto 100px;
+    width: 300px;
+    border-radius: 150px 150px 150px 150px;
     border: 5px solid #FFEEFF;
   }
 }
@@ -111,4 +111,29 @@ img {
   width: 400px;
   height: 300px;
   }
+}
+
+#topnumber{
+  img{
+    width: 400px;
+    height: auto;
+  }
+}
+
+.slide-show {
+	position: relative;
+	width: 500px;
+	margin:0 auto;
+}
+
+.slide-show img {
+	max-width: 100%;
+	opacity: 0;
+	left: 0 ;
+	position: absolute;
+	transition: opacity 1s;
+}
+
+.slide-show img.active {
+	opacity: 1;
 }
