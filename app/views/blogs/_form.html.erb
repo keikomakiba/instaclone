@@ -13,17 +13,19 @@
   <% end %>
 
   <div class="blog_title">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <ul>
+    <li><%= form.label :title %>
+    <%= form.text_field :title %></li>
   </div>
   <div class="blog_title">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
+    <li><%= form.label :content %>
+    <%= form.text_field :content %></li>
   </div>
   <div class="field">
-  <%= form.label :image %>
+  <li><%= form.label :image %>
   <%= form.file_field :image, id: :blog_image %>
-  <%= form.hidden_field :image_cache %>
+  <%= form.hidden_field :image_cache %></li>
+  </ul>
 </div>
 
   <%= form.submit %>

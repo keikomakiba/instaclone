@@ -3,18 +3,21 @@
     <p><%= notice %></p>
 
     <article>
-      <div class="container">
+      <div class="content">
       <% @blogs.each do |blog| %>
-          <ul class="row col-lg-6">
+        <ul class="row col-lg-6">
+          <li class="user_info">
+            <%= image_tag(blog.user.image.url) %>
+            <span><%= blog.user.name %>'s posts </span>
+          </li>
+          
           <li class="aaa ">
+            <%= image_tag blog.image %>
             <%= blog.title %>
             <%= blog.content %>
-            <%= image_tag blog.image %>
-      
-             <%= blog.user.name %>'s posts
           </li>
-    
           
+    
           <li class="col-lg-4 col-xs-12 "><%= link_to "details", blog_path(blog.id), class: 'btn btn-info'%></li>
           <% if blog.user_id == current_user.id %>
           <li class="col-lg-4 col-xs-12 "><%= link_to "edit", edit_blog_path(blog.id), class: 'btn btn-info'%></li>
@@ -27,7 +30,4 @@
       </div>
 
     </article>
-
-   
-      <%= link_to image_tag("images.png"), new_blog_path %>
 </div>
