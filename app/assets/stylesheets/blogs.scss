@@ -34,20 +34,18 @@ footer {
   margin: auto;
   padding-bottom: 10px;
   font-size: 12px;
-  margin-top: auto;
+  position: absolute;
   bottom: 0;
 }
 
 html {
   position: relative;
-  /*min-height: 100%;*/
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
   text-align: center;
-  /*min-height:100vh;*/
-  height: 100%;
+  min-height:100vh;
 }
 
 li {
@@ -75,7 +73,6 @@ header img {
     width: 8em;
     height: 8em;
     border-radius: 10em;
-    border: 3px solid #037abc;
   }
 }
 .camera img{
@@ -160,8 +157,8 @@ span{
 .container.user_image{
   width: 100px;
 }
-.container{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+/*.container{
+  position: relative; 
+  width: 100%; 
+  height: auto;
+}*/

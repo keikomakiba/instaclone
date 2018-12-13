@@ -2,9 +2,14 @@
     
     <h3><%= link_to "みんなのPOSTS", blogs_path %></h3>
 
-<h3><%= @user.name %>'s page</h3>
-<h3>✉︎: <%= @user.email %></h3>
-<li class="a"><%= image_tag(@user.image.url) %></li>
+  <li class="a">
+            <%= image_tag(@user.image.url) %>
+            <span><<%= @user.name %>'s posts </span>
+            mail:<%= @user.email %>
+  </li>
+          
+
+
 
 <div class=like>
     <p><%=image_tag("like.gif") %>LIKE IT
